@@ -1,0 +1,275 @@
+---
+import { getCollection } from "astro:content";
+
+const experienciasList = await getCollection("experiencias");
+const experiencias = experienciasList.length > 2 ? experienciasList.slice(0, 2) : experienciasList;
+
+const proyectosList = await getCollection("proyectos");
+const proyectos = proyectosList.length > 2 ? proyectosList.slice(0, 2) : proyectosList;
+
+const blogList = await getCollection("blog");
+const blogs = blogList.length > 2 ? blogList.slice(0, 2) : blogList;
+
+const tagColors: Record<string, string> = {
+	"Digital Art": "bg-pink-500/10 text-pink-500",
+	Illustration: "bg-blue-500/10 text-blue-500",
+	Anime: "bg-purple-500/10 text-purple-500",
+	"Web Development": "bg-[#219ebc]/10 text-[#219ebc]",
+	JavaScript: "bg-yellow-500/10 text-yellow-500",
+	Design: "bg-red-500/10 text-red-500",
+	Angular: "bg-red-500/10 text-red-500",
+	Chartjs: "bg-yellow-500/10 text-yellow-500",
+};
+---
+
+<section class="min-h-screen text-white px-6 py-4">
+	<main class="max-w-3xl mx-auto mt-32 text-left">
+		<h1 class="text-6xl md:text-7xl font-bold mb-4">Ernesto Solís</h1>
+		<h2 class="text-3xl md:text-4xl text-[#4177DC] font-semibold mb-6">Ingeniero de software</h2>
+		<p class="text-gray-400 text-lg mb-12 mx-auto">
+			Junto con mi trabajo y mi equipo Genius me especializo en encontrar soluciones innovadoras, optimizar procesos y desarrollar aplicaciones
+			y software escalables.
+		</p>
+		<button class="bg-[#4177DC] text-white px-8 py-3 rounded-full font-medium hover:bg-[#2955B0] transition-colors cursor-pointer">
+			Contáctame
+		</button>
+	</main>
+</section>
+
+<section class="text-white px-6 py-16">
+	<div class="max-w-4xl mx-auto">
+		<h2 class="text-4xl font-bold mb-12">Habilidades</h2>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<div class="group border border-gray-800 rounded-xl p-6 hover:border-gray-700 transition-colors">
+				<div class="flex items-center gap-3 mb-3">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+					</svg>
+					<h3 class="text-xl font-semibold">Desarrollo de Software</h3>
+				</div>
+				<p class="text-gray-400">Construyo aplicaciones eficientes y escalables que impulsan soluciones digitales.</p>
+			</div>
+
+			<div class="group border border-gray-800 rounded-xl p-6 hover:border-gray-700 transition-colors">
+				<div class="flex items-center gap-3 mb-3">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+					</svg>
+					<h3 class="text-xl font-semibold">Cloud & DevOps</h3>
+				</div>
+				<p class="text-gray-400">Automatizo y optimizo infraestructuras en la nube para mayor eficiencia y rendimiento.</p>
+			</div>
+
+			<div class="group border border-gray-800 rounded-xl p-6 hover:border-gray-700 transition-colors">
+				<div class="flex items-center gap-3 mb-3">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+						></path>
+					</svg>
+					<h3 class="text-xl font-semibold">Arquitectura e Infraestructura</h3>
+				</div>
+				<p class="text-gray-400">Diseño sistemas robustos y escalables que soportan aplicaciones críticas.</p>
+			</div>
+
+			<div class="group border border-gray-800 rounded-xl p-6 hover:border-gray-700 transition-colors">
+				<div class="flex items-center gap-3 mb-3">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+					</svg>
+					<h3 class="text-xl font-semibold">Solución de Problemas</h3>
+				</div>
+				<p class="text-gray-400">Encuentro soluciones innovadoras a desafíos tecnológicos y optimizo procesos.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="max-w-4xl mx-auto px-4 py-12 text-white">
+	<!-- Header Section -->
+	<div class="mb-12">
+		<h2 class="text-4xl font-bold mb-4">Experiencias</h2>
+		<p class="text-gray-300">Aqui comparto mis ultimas experiencias.</p>
+	</div>
+
+	<!-- Blog Card 1 -->
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+		{
+			experiencias.map((experiencia: any) => (
+				<a href={`experiencias/${experiencia.slug}`} class="block">
+					<div class="bg-gray-800 rounded-lg p-3 image-wrapper relative overflow-hidden">
+						<div class=" relative">
+							<img
+								src={`${experiencia.data.img}`}
+								alt={`${experiencia.data.ttitle}`}
+								transition:name={`${experiencia.data.title}-image`}
+								class="w-full h-60 object-cover"
+							/>
+						</div>
+						<div class="py-6 ">
+							<h2 class="text-white text-xl font-bold mb-2 ">{experiencia.data.title}</h2>
+							<p class="text-gray-400">{experiencia.data.description}</p>
+							<p class="text-gray-200 mt-1">
+								{new Date(experiencia.data.date).toLocaleDateString("es-ES", {
+									weekday: "long",
+									year: "numeric",
+									month: "long",
+									day: "numeric",
+								})}
+							</p>
+						</div>
+					</div>
+				</a>
+			))
+		}
+	</div>
+</section>
+
+<section class="max-w-4xl mx-auto px-4 py-12 text-white">
+	<div class="mb-12">
+		<h2 class="text-4xl font-bold mb-4">Proyectos</h2>
+		<p class="text-gray-300">Aqui puedes ver mis ultimos proyectos realizados.</p>
+	</div>
+
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+		{
+			proyectos.map((proyecto: any) => (
+				<div class="card-gradient rounded-xl overflow-hidden card-hover border border-gray-700 hover:scale-102 transition-transform duration-300 cursor-pointer">
+					<div class="image-wrapper relative overflow-hidden">
+						<a href={`proyectos/${proyecto.slug}`}>
+							<img
+								src={`${proyecto.data.img}`}
+								transition:name={`${proyecto.data.title}-image`}
+								alt="Cosmic nebula artwork"
+								class="w-full h-64 object-cover"
+							/>
+							<div class="overlay absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 transition-opacity duration-300 flex items-end p-6">
+								<div class="text-white">
+									<p class="font-medium">Click to view project details</p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="p-6">
+						<a href={`proyectos/${proyecto.slug}`}>
+							<div class="flex gap-2 mb-4">
+								{proyecto.data.tags.map((tag: string) => {
+									const colorClass = tagColors[tag] || "bg-gray-500/10 text-gray-300"; // Color por defecto si no está en la lista
+									return <span class={`px-3 py-1 ${colorClass} rounded-full text-xs font-medium`}>{tag}</span>;
+								})}
+							</div>
+							<h2 class="text-white text-xl font-bold mb-2">{`${proyecto.data.title}`}</h2>
+							<p class="text-gray-400 mb-4">{`${proyecto.data.description}`}</p>
+						</a>
+						<div class="flex justify-between items-center">
+							<a
+								href={`proyectos/${proyecto.slug}`}
+								class="text-blue-500 hover:text-blue-400 transition-colors duration-300 text-sm font-medium"
+							>
+								Ver proyecto →
+							</a>
+							<span class="text-gray-500 text-sm">{`${new Date(proyecto.data.date).getFullYear()}`}</span>
+						</div>
+					</div>
+				</div>
+			))
+		}
+	</div>
+</section>
+
+<section class="max-w-4xl mx-auto px-4 py-16 text-white">
+	<div class="mb-12">
+		<h2 class="text-3xl font-bold mb-4">Mis escrituras</h2>
+		<p class="text-gray-300">
+			Además de brindar soluciones, también me gusta escribir sobre la vida y la tecnología. Aquí están algunas de mis publicaciones recientes.
+		</p>
+	</div>
+
+	<div class="grid lg:flex gap-8 w-full">
+		<div class="space-y-6 w-full">
+			{
+				blogs.map((blog: any) => (
+					<a href={`blog/${blog.slug}`} class="block w-full">
+						<article class="bg-gray-800 border rounded-lg border-gray-900 p-6 w-full h-full flex flex-col hover:scale-102 transition-transform duration-300 hover:shadow-2xs">
+							<div class="sm:flex-row md:flex justify-between align-baseline py-2">
+								<h3 class="text-xl font-semibold mb-2 px-1 md:px-1 md:mb-0">
+									<span class="hover:text-blue-600">{blog.data.title}</span>
+								</h3>
+								<div class="flex gap-2 ">
+									{blog.data.tags.map((tag: string) => {
+										const colorClass = tagColors[tag] || "bg-gray-500/10 text-gray-300"; // Color por defecto si no está en la lista
+										return <span class={`px-3 py-1 ${colorClass} rounded-full text-xs font-medium`}>{tag}</span>;
+									})}
+								</div>
+							</div>
+
+							<p class="text-gray-300 mb-4 px-1">{blog.data.description}</p>
+							<p class="text-sm text-gray-400 px-1">{blog.data.datePub}</p>
+						</article>
+					</a>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+<section class="max-w-4xl mx-auto text-white py-16 px-4 mb-10">
+	<div class="text-left">
+		<h2 class="text-4xl font-bold mb-4">Contáctame</h2>
+		<p class="text-gray-400 mb-6">Puedes encontrarme en las siguientes plataformas:</p>
+
+		<div class="flex flex-col sm:flex-row gap-6">
+			<a href="mailto:ersolis021@gmail.com" class="flex items-center gap-2 text-gray-300 hover:text-white">
+				<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 49.4 512 399.42">
+					<g fill="none" fill-rule="evenodd">
+						<g fill-rule="nonzero">
+							<path fill="#4285f4" d="M34.91 448.818h81.454V251L0 163.727V413.91c0 19.287 15.622 34.91 34.91 34.91z"></path>
+							<path fill="#34a853" d="M395.636 448.818h81.455c19.287 0 34.909-15.622 34.909-34.909V163.727L395.636 251z"></path>
+							<path fill="#fbbc04" d="M395.636 99.727V251L512 163.727v-46.545c0-43.142-49.25-67.782-83.782-41.891z"></path>
+						</g>
+						<path fill="#ea4335" d="M116.364 251V99.727L256 204.455 395.636 99.727V251L256 355.727z"></path>
+						<path fill="#c5221f" fill-rule="nonzero" d="M0 117.182v46.545L116.364 251V99.727L83.782 75.291C49.25 49.4 0 74.04 0 117.18z"
+						></path>
+					</g>
+				</svg>
+
+				ersolis021@gmail.com
+			</a>
+
+			<a href="https://www.linkedin.com/in/erandreex/" target="_blank" class="flex items-center gap-2 text-gray-300 hover:text-white">
+				<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 256"
+					><path
+						d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453"
+						fill="#0A66C2"></path></svg
+				>
+
+				@erandreex
+			</a>
+		</div>
+	</div>
+</section>
+
+<section class="bg-gray-900 text-white py-16 px-6 md:px-12">
+	<div class="max-w-3xl mx-auto text-center">
+		<h2 class="text-3xl md:text-4xl font-bold mb-4">¿Tienes una idea?</h2>
+		<p class="text-lg text-gray-400 mb-6">Vamos por un café ☕ y conversemos. Estoy listo para ayudarte a crear lo que buscas.</p>
+		<a
+			href="mailto:tuemail@example.com"
+			class="inline-block bg-blue-500 hover:bg-blue-400 text-white text-lg font-medium py-3 px-6 rounded-lg transition"
+		>
+			📩 Contáctame
+		</a>
+	</div>
+</section>

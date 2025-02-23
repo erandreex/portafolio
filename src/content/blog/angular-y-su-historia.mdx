@@ -1,0 +1,41 @@
+---
+title: Angular y su historia
+date: 2025-02-22
+datePub: 22 de Febrero de 2025
+description: Mi manera de ver como ha evolucionado Angular a traves del tiempo
+img: /angular-main.jpg
+tags: ["Framework", "Angular"]
+---
+
+<br />
+Angular es uno de los frameworks más utilizados para el desarrollo web. Surge a raíz de mejorar y/o reemplazar al famoso jQuery que todos sabemos utilizar
+(o eso espero, jaja). Muchas páginas estaban escritas en jQuery con código spaghetti; casi seguro que los creadores optaron por llevar las cosas de manera
+diferente y más ordenada.
+
+<br />A lo largo del tiempo, desde el primer release, incluso cuando antes se llamaba AngularJS, muchas empresas apostaron por esta tecnología. Pero,
+como toda tecnología, debe ir evolucionando. Con el tiempo, Angular ha cambiado muchas cosas, y nos hemos topado con breaking changes (cambios que sí
+o sí hay que aplicar para pasar a una nueva versión). Estamos hablando de aproximadamente 2.
+
+<br />
+El ZoneChangeDetection, el famoso Zone.js que utiliza Angular, es el encargado de realizar las actualizaciones (refrescar el estado, para algunos, xd)
+en la página. Esto hace que, por cada cambio, aunque sea mínimo, se lancen un montón de detecciones de cambios y ciclos de vida de los componentes que
+ralentizan un poco la interacción (casi que insignificante, pero sí).
+
+<br />
+Muchos frameworks allá afuera aprendieron a hacer cosas como Angular, pero mejorando lo que Angular tenía de malo, y ajá, les salió bien. Sin embargo,
+en el caso de Angular, no diríamos que está obsoleto, pero quedó desfasado. ¿Por qué? Porque para aplicar mejoras, sobre todo en su detección de cambios,
+que es lo que hace que se relantice, habría que prácticamente hacer una nueva aplicación. Y Angular, en mi opinión, siempre ha tratando de llevar esto
+de una manera bonita. Jajaja.
+
+<br />
+En los últimos releases, aproximadamente desde el 17, Angular está apostando por un cambio en su paradigma, introduciendo señales, que básicamente guardan
+en memoria el lugar donde se presentan en la pantalla. Una vez que ese valor cambie, solo se actualiza ese valor, evitando que se ejecute la detección
+de cambios y todos los ciclos de vida que se realizaban. También, Angular está buscando la manera de dejar de lado la parte de trabajar con módulos y que
+todo sea standalone.
+
+<br />
+Considero que para un release 24 o 25, Angular dejará obsoleto el tema de ZoneChangeDetection (Zone.js); esto definitivamente hará que las aplicaciones
+sean más rápidas. Pero, la gran pregunta es ¿qué pasará con las aplicaciones que ya están desarrolladas con versiones anteriores? En mi opinión, Angular
+desarrollará herramientas (comandos en el CLI, Herramientas integradas con IA...) que permitan hacer esa transición de manera limpia, pero esto no será
+una tarea fácil para los desarrolladores de Angular (¡ojalá no me toque a mí hacerlo!). Y sí Angular seguira estando mucho tiempo mas en el mercado porque
+el mercado tiene muchas aplicaciones desarrolladas.
