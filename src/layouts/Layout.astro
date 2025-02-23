@@ -1,5 +1,6 @@
 ---
 import { ClientRouter } from "astro:transitions";
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -9,7 +10,8 @@ import { ClientRouter } from "astro:transitions";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
+		<meta name="description" content={description} />
 		<ClientRouter />
 	</head>
 	<body class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 min-h-screen">

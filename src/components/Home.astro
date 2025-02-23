@@ -109,7 +109,7 @@ const tagColors: Record<string, string> = {
 		{
 			experiencias.map((experiencia: any) => (
 				<a href={`experiencias/${experiencia.slug}`} class="block">
-					<div class="bg-gray-800 rounded-lg p-3 image-wrapper relative overflow-hidden">
+					<div class="bg-gray-800 rounded-lg p-3 image-wrapper relative overflow-hidden hover:scale-102 transition-transform duration-300 hover:shadow-2xs">
 						<div class=" relative">
 							<img
 								src={`${experiencia.data.img}`}
@@ -119,8 +119,8 @@ const tagColors: Record<string, string> = {
 							/>
 						</div>
 						<div class="py-6 ">
-							<h2 class="text-white text-xl font-bold mb-2 ">{experiencia.data.title}</h2>
-							<p class="text-gray-400">{experiencia.data.description}</p>
+							<h2 class="text-white text-xl font-bold mb-2">{experiencia.data.title}</h2>
+							<p class="text-gray-400 line-clamp-2">{experiencia.data.description}</p>
 							<p class="text-gray-200 mt-1">
 								{new Date(experiencia.data.date).toLocaleDateString("es-ES", {
 									weekday: "long",
@@ -171,7 +171,7 @@ const tagColors: Record<string, string> = {
 								})}
 							</div>
 							<h2 class="text-white text-xl font-bold mb-2">{`${proyecto.data.title}`}</h2>
-							<p class="text-gray-400 mb-4">{`${proyecto.data.description}`}</p>
+							<p class="text-gray-400 mb-4 line-clamp-2">{`${proyecto.data.description}`}</p>
 						</a>
 						<div class="flex justify-between items-center">
 							<a
@@ -215,7 +215,7 @@ const tagColors: Record<string, string> = {
 								</div>
 							</div>
 
-							<p class="text-gray-300 mb-4 px-1">{blog.data.description}</p>
+							<p class="text-gray-300 mb-4 px-1 line-clamp-2">{blog.data.description}</p>
 							<p class="text-sm text-gray-400 px-1">{blog.data.datePub}</p>
 						</article>
 					</a>
@@ -266,7 +266,7 @@ const tagColors: Record<string, string> = {
 		<h2 class="text-3xl md:text-4xl font-bold mb-4">¿Tienes una idea?</h2>
 		<p class="text-lg text-gray-400 mb-6">Vamos por un café ☕ y conversemos. Estoy listo para ayudarte a crear lo que buscas.</p>
 		<a
-			href="mailto:tuemail@example.com"
+			href="mailto:ersolis021@gmail.com"
 			class="inline-block bg-blue-500 hover:bg-blue-400 text-white text-lg font-medium py-3 px-6 rounded-lg transition"
 		>
 			📩 Contáctame

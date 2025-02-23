@@ -17,7 +17,7 @@ const { entrada } = Astro.props;
 const { Content } = await entrada.render();
 ---
 
-<Layout>
+<Layout title=`${entrada.data.title}` description=`${entrada.data.description}`>
 	<Header />
 
 	<div class="max-w-4xl mx-auto py-8 px-6 text-white min-h-screen">
@@ -32,7 +32,7 @@ const { Content } = await entrada.render();
 		<h1 class="text-3xl font-bold text-white mb-4">{entrada.data.title}</h1>
 		<p class="text-gray-400 text-sm mb-2">
 			Publicado: <time datetime="2025-02-16">{entrada.data.datePub}</time>
-			<br /> Autor <span class="text-blue-400">Ernesto Solís</span>
+			<br /> Autor <a href="/ernesto-solis" class="hover:text-blue-500 enlaces">Ernesto Solís</a>
 		</p>
 		<br />
 		<img
