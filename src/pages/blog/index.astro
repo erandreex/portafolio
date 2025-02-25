@@ -8,35 +8,29 @@ import Footer from "../../components/Footer.astro";
 
 const posts = await getCollection("blog");
 
-const tagColors: Record<string, string> = {
-	"Digital Art": "bg-pink-500/10 text-pink-500",
-	Illustration: "bg-blue-500/10 text-blue-500",
-	Anime: "bg-purple-500/10 text-purple-500",
-	"Web Development": "bg-[#219ebc]/10 text-[#219ebc]",
-	JavaScript: "bg-yellow-500/10 text-yellow-500",
-	Design: "bg-red-500/10 text-red-500",
-	Angular: "bg-red-500/10 text-red-500",
-	Chartjs: "bg-yellow-500/10 text-yellow-500",
-};
+import { tagColors } from "../../utils/tags";
 ---
 
-<Layout title="Blog" description="blog oficial de Ernesto Solís">
+<Layout
+	title="Blog"
+	description="Sitio oficial del blog de Ernesto Solís, donde comparte historias, opiniones y reflexiones sobre temas tecnológicos."
+>
 	<Header />
 
 	<div class="max-w-7xl py-4 px-6 md:px-6 mx-auto min-h-screen">
 		<div class="flex items-center space-x-2 text-gray-400 py-10">
-			<a href="/" class="hover:text-blue-500">Inicio</a>
+			<a href="/" class="hover-text-primary">Inicio</a>
 			<span>/</span>
-			<a href="/blog" class="hover:text-blue-500">Blog</a>
+			<a href="/blog" class="hover-text-primary">Blog</a>
 		</div>
 
 		<h2 class="text-4xl font-bold text-white">Blog Personal</h2>
-		<p class="text-gray-400 py-4 mb-12">A veces escribo lo que me de la gana.</p>
+		<p class="text-gray-400 py-4 mb-12">Aquí comparto historias y opiniones sobre temas tecnológicos. ¡Espero que les guste!</p>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 			{
 				posts.map((entrada: any) => (
-					<a href={`blog/${entrada.slug}`} class="block">
+					<a href={`/blog/${entrada.slug}`} class="block">
 						<article class="rounded-lg overflow-hidden shadow-lg hover:shadow-md transition-shadow bg-gradient-to-br from-gray-900 via-gray-800 to-gray-800 animate-wavy">
 							<div class="relative">
 								<img

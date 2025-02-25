@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
 .enlaces {
-	color: blueviolet;
+	color: #94d816;
+}
+
+.color-text-primary {
+	color: #94da11;
+}
+
+.hover-text-primary:hover {
+	color: #72a710;
+}
+
+.color-bg-primary {
+	background-color: #70ac01;
+}
+
+.hover-bg-primary:hover {
+	background-color: #2c5c00;
 }

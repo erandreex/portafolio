@@ -2,37 +2,31 @@
 import { getCollection } from "astro:content";
 
 const experienciasList = await getCollection("experiencias");
-const experiencias = experienciasList.length > 2 ? experienciasList.slice(0, 2) : experienciasList;
+const experiencias = experienciasList.slice(0, 2);
 
 const proyectosList = await getCollection("proyectos");
-const proyectos = proyectosList.length > 2 ? proyectosList.slice(0, 2) : proyectosList;
+const proyectos = proyectosList.slice(0, 2);
 
 const blogList = await getCollection("blog");
-const blogs = blogList.length > 2 ? blogList.slice(0, 2) : blogList;
+const blogs = blogList.slice(0, 2);
 
-const tagColors: Record<string, string> = {
-	"Digital Art": "bg-pink-500/10 text-pink-500",
-	Illustration: "bg-blue-500/10 text-blue-500",
-	Anime: "bg-purple-500/10 text-purple-500",
-	"Web Development": "bg-[#219ebc]/10 text-[#219ebc]",
-	JavaScript: "bg-yellow-500/10 text-yellow-500",
-	Design: "bg-red-500/10 text-red-500",
-	Angular: "bg-red-500/10 text-red-500",
-	Chartjs: "bg-yellow-500/10 text-yellow-500",
-};
+import { tagColors } from "./../utils/tags.js";
 ---
 
 <section class="min-h-screen text-white px-6 py-4">
 	<main class="max-w-3xl mx-auto mt-32 text-left">
 		<h1 class="text-6xl md:text-7xl font-bold mb-4">Ernesto Solís</h1>
-		<h2 class="text-3xl md:text-4xl text-[#4177DC] font-semibold mb-6">Ingeniero de software</h2>
+		<h2 class="text-3xl md:text-4xl color-text-primary font-semibold mb-6">Ingeniero de software</h2>
 		<p class="text-gray-400 text-lg mb-12 mx-auto">
 			Junto con mi trabajo y mi equipo Genius me especializo en encontrar soluciones innovadoras, optimizar procesos y desarrollar aplicaciones
 			y software escalables.
 		</p>
-		<button class="bg-[#4177DC] text-white px-8 py-3 rounded-full font-medium hover:bg-[#2955B0] transition-colors cursor-pointer">
+		<a
+			href="mailto:ersolis021@gmail.com"
+			class="color-bg-primary text-white px-8 py-3 rounded-full font-medium hover-bg-primary transition-colors cursor-pointer"
+		>
 			Contáctame
-		</button>
+		</a>
 	</main>
 </section>
 
@@ -267,7 +261,7 @@ const tagColors: Record<string, string> = {
 		<p class="text-lg text-gray-400 mb-6">Vamos por un café ☕ y conversemos. Estoy listo para ayudarte a crear lo que buscas.</p>
 		<a
 			href="mailto:ersolis021@gmail.com"
-			class="inline-block bg-blue-500 hover:bg-blue-400 text-white text-lg font-medium py-3 px-6 rounded-lg transition"
+			class="inline-block color-bg-primary hover-bg-primary text-white text-lg font-medium py-3 px-6 rounded-lg transition"
 		>
 			📩 Contáctame
 		</a>
