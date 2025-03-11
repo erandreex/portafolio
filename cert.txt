@@ -1,0 +1,3 @@
+sudo yum update -y
+sudo yum install -y certbot
+sudo certbot certonly --standalone -d DOMAIN.com -d www.DOMAIN.com
